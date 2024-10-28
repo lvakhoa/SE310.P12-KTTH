@@ -1,0 +1,32 @@
+@{
+    Layout = null;
+}
+
+@model IOrderedQueryable<TDanhMucSp>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Materials</th>
+            <th>Weight</th>
+            <th>Min Price</th>
+            <th>Max Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var sp in Model)
+        {
+            <tr>
+                <td>@sp.MaSp</td>
+                <td>@sp.TenSp</td>
+                <td>@sp.CanNang</td>
+                <td>@sp.GiaNhoNhat</td>
+                <td>@sp.GiaLonNhat</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
